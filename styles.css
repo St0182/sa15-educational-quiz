@@ -1,0 +1,72 @@
+
+/* Styling the body element */
+body {
+    font-family: Arial, sans-serif; /* Applying Arial font and sans-serif fallback */
+    display: flex; /* Setting display to flex for layout */
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
+    background-color: #3d89a0; /* Coloring the background a soft blue */
+    height: 100vh; /* Setting the height to fill the viewport */
+    margin: 0; /* Removing default margins */
+}
+
+/* Styling the container for the quiz */
+#quiz-container {
+    width: 100%; /* Ensuring the container stretches to fit the width of its parent */
+    max-width: 800px; /* Setting the maximum width of the container */
+    background-color: #778080; /* Applying a grey background color */
+    padding: 40px; /* Adding padding inside the container to create space around the content */
+    border-radius: 8px; /* Rounding the corners of the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Applying a subtle shadow for depth */
+    position: relative; /* Setting position to relative to allow absolute positioning of child elements */
+}
+
+/* Adding a specific style for the background image */
+#quiz-container::after {
+    content: ""; /* Necessary for pseudo-elements to display */
+    position: absolute; /* Positioning the pseudo-element absolutely within its relative parent */
+    top: 10px; /* Positioning from the top of the container */
+    right: 10px; /* Positioning from the right of the container */
+    width: 200px; /* Specifying the width of the image */
+    height: 200px; /* Specifying the height of the image */
+    background-image: url('quiz.jpg'); /* Setting the image as the background */
+    background-size: contain; /* Ensuring the entire image fits within the dimensions specified */
+    background-repeat: no-repeat; /* Preventing the image from repeating */
+}
+
+
+/* Styling the question elements */
+.question {
+    font-size: 20px; /* Increasing font size for readability */
+    margin-bottom: 20px; /* Adding space below each question */
+}
+
+/* Styling list items inside .choices */
+.choices li {
+    list-style: none; /* Removing bullet points from list items */
+    padding: 10px; /* Adding padding to list items */
+    background: white; /* Setting background color to white */
+    border: 2px solid #ddd; /* Adding a light grey border */
+    margin-top: 5px; /* Spacing list items vertically */
+    cursor: pointer; /* Changing cursor to pointer to indicate clickable */
+}
+
+/* Enhancing hover effect for list items inside .choices */
+.choices li:hover {
+    background: #efefef; /* Lightening background on hover */
+}
+
+/* Styling buttons */
+button {
+    padding: 10px 20px; /* Adding padding to make button larger */
+    background: #007BFF; /* Setting a vibrant blue background */
+    color: white; /* Making text color white for contrast */
+    border: none; /* Removing default border */
+    border-radius: 5px; /* Rounding the corners of the button */
+    cursor: pointer; /* Changing cursor to pointer to indicate clickable */
+}
+
+/* Styling buttons on hover */
+button:hover {
+    background: #0056b3; /* Darkening background on hover for feedback */
+}
